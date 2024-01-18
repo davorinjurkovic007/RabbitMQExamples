@@ -26,7 +26,7 @@ var properties = channel.CreateBasicProperties();
 properties.Persistent = true;
 
 channel.BasicPublish(exchange: string.Empty,
-                    routingKey: "hello",
+                    routingKey: "task_queue",
                     basicProperties: properties,
                     body: body);
 Console.WriteLine($" [x] Send {mesage}");
